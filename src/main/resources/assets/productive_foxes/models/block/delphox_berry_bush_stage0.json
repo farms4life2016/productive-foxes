@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "productive_foxes:block/delphox_berry_bush_stage0"
+  }
+}
