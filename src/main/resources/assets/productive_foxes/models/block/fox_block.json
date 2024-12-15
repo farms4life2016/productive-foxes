@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "productive_foxes:block/fox_block"
+	}
+}
