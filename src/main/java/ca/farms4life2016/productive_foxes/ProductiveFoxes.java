@@ -48,7 +48,7 @@ public class ProductiveFoxes {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "productive_foxes";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "productive_foxes" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
     // Create a Deferred Register to hold Items which will all be registered under the "productive_foxes" namespace
