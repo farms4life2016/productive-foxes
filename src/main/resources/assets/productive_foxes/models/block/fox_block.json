@@ -1,5 +1,6 @@
 {
 	"parent": "block/cube_all",
+	"render_type": "cutout",
 	"textures": {
 		"all": "productive_foxes:block/fox_block"
 	}
