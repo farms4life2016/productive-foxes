@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id" : "productive_foxes:delphox_berry_item",
+      "required" : false
+    }
+  ],
+  "replace" : false,
+  "remove" : [
+
+  ]
+}
