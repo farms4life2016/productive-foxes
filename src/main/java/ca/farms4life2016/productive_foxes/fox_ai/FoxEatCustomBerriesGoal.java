@@ -1,5 +1,6 @@
-package ca.farms4life2016.productive_foxes;
+package ca.farms4life2016.productive_foxes.fox_ai;
 
+import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;

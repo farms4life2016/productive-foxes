@@ -1,5 +1,6 @@
-package ca.farms4life2016.productive_foxes;
+package ca.farms4life2016.productive_foxes.tag_bloat;
 
+import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

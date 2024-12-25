@@ -1,14 +1,5 @@
-package ca.farms4life2016.productive_foxes;
+package ca.farms4life2016.productive_foxes.fox_ai;
 
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.animal.Fox;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-
-import static ca.farms4life2016.productive_foxes.ProductiveFoxes.MOD_ID;
 //
 //@EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 //public class FoxBreedingHandler {
