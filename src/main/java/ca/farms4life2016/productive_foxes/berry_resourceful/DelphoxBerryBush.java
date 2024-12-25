@@ -1,13 +1,12 @@
-package ca.farms4life2016.productive_foxes;
+package ca.farms4life2016.productive_foxes.berry_resourceful;
 
+import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;

@@ -1,5 +1,6 @@
-package ca.farms4life2016.productive_foxes;
+package ca.farms4life2016.productive_foxes.fox_ai;
 
+import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Fox;
