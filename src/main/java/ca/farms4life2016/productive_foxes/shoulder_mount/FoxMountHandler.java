@@ -3,6 +3,7 @@ package ca.farms4life2016.productive_foxes.shoulder_mount;
 import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,7 +20,7 @@ public class FoxMountHandler {
         var player = event.getEntity();
 
         if (event.getLevel().isClientSide() || ! (event.getTarget() instanceof Fox fox)) {
-            return; // no idea why this clientside check is necessary
+            // no idea why this clientside check is necessary
         } else {
 
             // check that player is crouching, has an empty hand, and fox is a baby
