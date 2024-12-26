@@ -1,27 +1,13 @@
 
-Installation information
-=======
+# Productive Foxes
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+A farm-all-resources mod similar to Mystical Agriculture and Productive Bees, 
+but instead of farm plants or bees, you farm resources
+with berry bushes and cute foxes!
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-> **Note**: For Eclipse, use tasks in `Launch Group` instead of ones founds in `Java Application`. A preparation task must run before launching the game. NeoGradle uses launch groups to do these subsequently.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Features
++ **Easy fox-wrangling!** We know how hard it is to move villagers, let alone foxes.
+Now you can *shift-right click a **baby fox** with an open hand* to put the fox
+on your shoulder! These shoulder-mounted foxes work the same way as shoulder-mounted parrots, 
+meaning that they will dismount when you jump or fall into a liquid.
++ Other WIP features...
