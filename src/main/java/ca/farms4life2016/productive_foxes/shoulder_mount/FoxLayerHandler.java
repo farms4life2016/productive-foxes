@@ -20,7 +20,7 @@ public class FoxLayerHandler {
         // add shoulder fox to player render
         for (var skin : event.getSkins()) {
             PlayerRenderer renderer = event.getSkin(skin);
-            renderer.addLayer(new FoxShoulderLayer(renderer, modelSet));
+            renderer.addLayer(new FoxShoulderLayer<>(renderer, modelSet));
         }
     }
 

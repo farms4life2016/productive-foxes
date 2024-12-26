@@ -1,5 +1,6 @@
 package ca.farms4life2016.productive_foxes;
 
+import ca.farms4life2016.productive_foxes.berry_resourceful.BerryInfuserBlock;
 import ca.farms4life2016.productive_foxes.berry_resourceful.DelphoxBerryBush;
 import ca.farms4life2016.productive_foxes.berry_resourceful.DelphoxBerryItem;
 import net.minecraft.world.food.Foods;
@@ -68,6 +69,9 @@ public class ProductiveFoxes {
     // public static final DeferredItem<BlockItem> DELPHOX_BERRY_BUSH_ITEM = ITEMS.registerSimpleBlockItem("delphox_berry_bush", DELPHOX_BERRY_BUSH);
     public static final DeferredItem<BlockItem> DELPHOX_BERRY_ITEM = ITEMS.registerItem("delphox_berry_item", bruh -> new DelphoxBerryItem(DELPHOX_BERRY_BUSH.get(), new Item.Properties().food(Foods.SWEET_BERRIES)));
 
+    // create the berry infuser
+    public static final DeferredBlock<Block> BERRY_INFUSER_BLOCK = BLOCKS.register("berry_infuser", bruh -> new BerryInfuserBlock(BlockBehaviour.Properties.of()) );
+    public static final DeferredItem<BlockItem> BERRY_INFUSER_ITEM = ITEMS.registerSimpleBlockItem("berry_infuser", BERRY_INFUSER_BLOCK);
 
     // Creates a creative tab with the id "productive_foxes:fox_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("fox_tab", () -> CreativeModeTab.builder()
@@ -77,8 +81,8 @@ public class ProductiveFoxes {
             .displayItems((parameters, output) -> {
                 output.accept(FOX_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
                 output.accept(FOX_BLOCK_ITEM.get());
-                // output.accept(DELPHOX_BERRY_BUSH_ITEM.get());
                 output.accept(DELPHOX_BERRY_ITEM.get());
+                output.accept(BERRY_INFUSER_ITEM.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.

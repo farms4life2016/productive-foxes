@@ -17,7 +17,6 @@ public class FoxGoalAdder {
 
         if (entity.getType() == EntityType.FOX && entity instanceof Fox fox) {
             fox.goalSelector.addGoal(10, new FoxEatCustomBerriesGoal(fox, 1.2F, 12 ,1));
-            ProductiveFoxes.LOGGER.info("Custom Berry Goal added to Fox");
         }
     }
 }

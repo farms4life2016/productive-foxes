@@ -4,5 +4,7 @@
 	"itemGroup.productive_foxes": "Productive Foxes Creative Tab",
 
 	"block.productive_foxes.delphox_berry_bush": "\"Delphox berry bush\"",
-	"item.productive_foxes.delphox_berry_item": "Delphox \"Berry\""
+	"item.productive_foxes.delphox_berry_item": "Delphox \"Berry\"",
+
+	"block.productive_foxes.berry_infuser": "Berry Infuser | || || |_"
 }
