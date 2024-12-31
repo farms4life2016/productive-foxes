@@ -83,21 +83,21 @@ public class FoxShoulderLayer<T extends Player> extends RenderLayer<T, PlayerMod
             pPoseStack.pushPose();
 
             // place fox on player's shoulder
-            pPoseStack.translate( left ? 0.4f : -0.4f, player.isCrouching() ? -1.3f : -1.5f, 0f);
+            pPoseStack.translate( left ? 0.4f : -0.4f, player.isCrouching() ? -1.3f : -1.5f, -0.1f);
 
             // create a temp Fox to base the model off of
-            Fox temp = EntityType.FOX.create(player.level());
-            if (temp != null) {
-                temp.load(foxData);
-                temp.stopSleeping(); // wake up the fox
-                temp.setSitting(true); // force the fox to sit
+            Fox shoulderFox = EntityType.FOX.create(player.level());
+            if (shoulderFox != null) {
+                shoulderFox.load(foxData);
 
                 // get fox's variant (red or snow)
-                var variant = temp.getVariant();
+                var variant = shoulderFox.getVariant();
 
                 // render fox model
                 var consumer = pBufferSource.getBuffer(babyFoxModel.renderType(variant.equals(Fox.Type.RED) ? RED_FOX_TEXTURE : SNOW_FOX_TEXTURE));
-                babyFoxModel.setupAnim(temp, pLimbSwing, pLimbSwingAmount, pAgeInTicks, pNetHeadYaw, pHeadPitch);
+                babyFoxModel.prepareMobModel(shoulderFox, pLimbSwing, pLimbSwingAmount, 0); // sets up the sitting model
+                babyFoxModel.setupAnim(shoulderFox, pLimbSwing, pLimbSwingAmount, pAgeInTicks, pNetHeadYaw, pHeadPitch);
+
                 babyFoxModel.renderToBuffer(pPoseStack, consumer, pPackedLight, OverlayTexture.NO_OVERLAY);
             }
 

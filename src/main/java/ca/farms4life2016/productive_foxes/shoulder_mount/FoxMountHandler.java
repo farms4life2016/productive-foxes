@@ -44,6 +44,11 @@ public class FoxMountHandler {
             fox.saveWithoutId(foxData);
             foxData.putString("id", Objects.requireNonNull(fox.getEncodeId()));
 
+            // change the NBT data itself because the corresponding setters are not public in Fox
+            foxData.putBoolean("Sleeping", false);
+            foxData.putBoolean("Sitting", true);
+            foxData.putBoolean("Crouching", false); // not sure if this is necessary
+
             player.setEntityOnShoulder(foxData);
             fox.discard();
 
