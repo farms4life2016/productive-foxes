@@ -1,6 +1,7 @@
 package ca.farms4life2016.productive_foxes.tag_bloat;
 
 import ca.farms4life2016.productive_foxes.ProductiveFoxes;
+import com.mojang.logging.LogUtils;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -8,6 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import org.slf4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,6 +18,8 @@ import java.util.concurrent.CompletableFuture;
  */
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = ProductiveFoxes.MOD_ID)
 public class DataGeneratorHandler {
+
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -26,7 +30,7 @@ public class DataGeneratorHandler {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        ProductiveFoxes.LOGGER.error("Adding tags! PLEASE FREAKING WORK!");
+        LOGGER.error("Adding tags! PLEASE FREAKING WORK!");
 
         // store references
         var blockProvider = new DummyBlockProvider(output, lookupProvider, existingFileHelper);
