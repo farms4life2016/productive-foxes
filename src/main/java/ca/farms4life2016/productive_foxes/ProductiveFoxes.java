@@ -40,31 +40,32 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ProductiveFoxes.MOD_ID)
 public class ProductiveFoxes {
-    // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "productive_foxes";
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "productive_foxes" namespace
+
+    public static final String MOD_ID = "productive_foxes";
+
+    // Deferred Registers
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    // Create a Deferred Register to hold Items which will all be registered under the "productive_foxes" namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "productive_foxes" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
 
-    // Creates a new Block with the id "productive_foxes:fox_block", combining the namespace and path
+    /*
+     * Add blocks and items
+     */
     public static final DeferredBlock<Block> FOX_BLOCK = BLOCKS.registerSimpleBlock("fox_block",
             BlockBehaviour.Properties.of().sound(SoundType.WOOL).lightLevel(s -> 15).strength(0.8F));
-    // Creates a new BlockItem with the id "productive_foxes:fox_block", combining the namespace and path
+    // item for our block above ^
     public static final DeferredItem<BlockItem> FOX_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("fox_block", FOX_BLOCK);
 
     // Creates a new food item with the id "productive_foxes:fox_item", nutrition 1 and saturation 2
     public static final DeferredItem<Item> FOX_ITEM = ITEMS.registerSimpleItem("fox_item", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
-
-    // creates the berry bush???
+    // creates the berry bush block
     public static final DeferredBlock<Block> DELPHOX_BERRY_BUSH = BLOCKS.register("delphox_berry_bush", DelphoxBerryBush::new);
+    // block-item form of the berry bush (unused)
     // public static final DeferredItem<BlockItem> DELPHOX_BERRY_BUSH_ITEM = ITEMS.registerSimpleBlockItem("delphox_berry_bush", DELPHOX_BERRY_BUSH);
     public static final DeferredItem<BlockItem> DELPHOX_BERRY_ITEM = ITEMS.registerItem("delphox_berry_item", bruh -> new DelphoxBerryItem(DELPHOX_BERRY_BUSH.get(), new Item.Properties().food(Foods.SWEET_BERRIES)));
 
@@ -87,11 +88,9 @@ public class ProductiveFoxes {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        // Register the Deferred Registers
         BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
@@ -99,7 +98,7 @@ public class ProductiveFoxes {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // Register an item to an existing creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -113,7 +112,7 @@ public class ProductiveFoxes {
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
 
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
+        LOGGER.info("{}{}", Config.magicNumberIntroduction, Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
@@ -140,6 +139,6 @@ public class ProductiveFoxes {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
-
     }
+
 }
