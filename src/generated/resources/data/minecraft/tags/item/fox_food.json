@@ -1,6 +1,8 @@
 {
   "values": [
     "minecraft:apple",
-    "productive_foxes:delphox_berry_item"
+    "productive_foxes:delphox_berry_item",
+    "productive_foxes:sour_berries_item",
+    "productive_foxes:extra_sour_berries_item"
   ]
 }

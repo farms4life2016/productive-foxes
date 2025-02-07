@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "productive_foxes:item/sugary_sweet_berry_mix_item"
+  }
+}

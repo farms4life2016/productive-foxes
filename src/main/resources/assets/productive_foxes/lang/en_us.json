@@ -1,8 +1,14 @@
 {
 	"item.productive_foxes.fox_item": "Totally not an edible Delphox",
-	"block.productive_foxes.fox_block": "Delphox block???",
-	"itemGroup.productive_foxes": "Productive Foxes Creative Tab",
+	"block.productive_foxes.fox_block": "Delphox Block???",
+	"itemGroup.productive_foxes": "Productive Foxes",
 
-	"block.productive_foxes.delphox_berry_bush": "\"Delphox berry bush\"",
-	"item.productive_foxes.delphox_berry_item": "Delphox \"Berry\""
+	"block.productive_foxes.delphox_berry_bush": "\"Delphox Berry Bush\"",
+	"item.productive_foxes.delphox_berry_item": "Delphox \"Berry\"",
+
+	"item.productive_foxes.sour_berries_item": "Sour Berries",
+	"item.productive_foxes.extra_sour_berries_item": "Extra Sour Berries",
+	"item.productive_foxes.sugary_sweet_berry_mix_item": "Sugary Sweet Berry Mix",
+	"item.productive_foxes.sweet_berry_jam_item": "Sweet Berry Jam",
+	"item.productive_foxes.empty_jam_jar_item": "Empty Jam Jar"
 }

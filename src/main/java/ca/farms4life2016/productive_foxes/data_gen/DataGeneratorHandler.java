@@ -1,4 +1,4 @@
-package ca.farms4life2016.productive_foxes.tag_bloat;
+package ca.farms4life2016.productive_foxes.data_gen;
 
 import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import com.mojang.logging.LogUtils;
@@ -35,10 +35,12 @@ public class DataGeneratorHandler {
         // store references
         var blockProvider = new DummyBlockProvider(output, lookupProvider, existingFileHelper);
         var foxFoodProvider = new FoxFoodProvider(output, lookupProvider, blockProvider.contentsGetter(), existingFileHelper);
+        var modRecipeProvider = new ModRecipeProvider(output, lookupProvider);
 
         // Register the providers
         generator.addProvider(event.includeServer(), blockProvider);
         generator.addProvider(event.includeServer(), foxFoodProvider);
+        generator.addProvider(event.includeServer(), modRecipeProvider);
 
     }
 }

@@ -1,4 +1,4 @@
-package ca.farms4life2016.productive_foxes.tag_bloat;
+package ca.farms4life2016.productive_foxes.data_gen;
 
 import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import com.mojang.logging.LogUtils;

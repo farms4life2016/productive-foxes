@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "productive_foxes:item/sour_berries_item"
+  }
+}

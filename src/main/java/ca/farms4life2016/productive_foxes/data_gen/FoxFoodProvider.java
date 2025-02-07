@@ -1,4 +1,4 @@
-package ca.farms4life2016.productive_foxes.tag_bloat;
+package ca.farms4life2016.productive_foxes.data_gen;
 
 import ca.farms4life2016.productive_foxes.ProductiveFoxes;
 import com.mojang.logging.LogUtils;
@@ -34,6 +34,9 @@ public class FoxFoodProvider extends ItemTagsProvider {
         LOGGER.error("adding item tags");
         tag(ItemTags.FOX_FOOD)
                 .add(Items.APPLE)
-                .add(ProductiveFoxes.DELPHOX_BERRY_ITEM.get());
+                .add(ProductiveFoxes.DELPHOX_BERRY_ITEM.get())
+                .add(ProductiveFoxes.SOUR_BERRIES_ITEM.get())
+                .add(ProductiveFoxes.EXTRA_SOUR_BERRIES_ITEM.get())
+        ;
     }
 }
